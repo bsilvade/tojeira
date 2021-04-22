@@ -223,8 +223,8 @@ z-index:0;
     h3, p{font-size:10px;}
     .signature{height:16px;}
     #habitatSignature{bottom:95px;}
-    #logotypeAnimationLeft, #logotypeAnimationRight{top:35%; z-index:10;}
-    .logotype{height:40px;}
+    #logotypeAnimationLeft, #logotypeAnimationRight{top:40%; z-index:10;}
+    .logotype{height:50px;}
     #imageOne, #imageThree {opacity:1 !important;}
     #imageTwo {display:none;}
     #imageThree {bottom:80px;}
