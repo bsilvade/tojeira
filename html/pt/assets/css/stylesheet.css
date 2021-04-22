@@ -229,7 +229,8 @@ z-index:0;
     #imageTwo {display:none;}
     #imageThree {bottom:165px;}
     #sinopsis{height:125px;bottom:40px;}
-    #contacts, .mail, .location, .social, .mail h2, .location h2, .social h2 {height:40px;}
+    #contacts{height:80px;}
+    .mail, .location, .social, .mail h2, .location h2, .social h2 {height:40px;}
     .mail h2, .location h2, .social h2 {padding-top:11px;}
     #coordenates{padding-top:26px}
     .arrow{margin-top:4px;width:12px; height:12px;}
