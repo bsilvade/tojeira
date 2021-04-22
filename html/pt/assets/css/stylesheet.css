@@ -1,0 +1,236 @@
+/*-------- Body / Background --------*/
+
+body{
+    margin:0px;
+    padding:0px;
+    background-color:#9b8773;
+    cursor:none !important;}
+
+
+
+
+/*-------- Mouse / Cursor --------*/
+
+.canvas{position:fixed; width:100%; height:90%; z-index:4}
+
+.cursor{position:absolute;
+width:200px;
+height:200px;
+}
+
+
+
+
+/*-------- Typography / Links --------*/
+
+h1, h2, h3, p {font-family:nimbus-sans-extended, sans-serif; color:rgba(0,0,0,0.7);}
+
+h1{font-size: 36px; text-transform: uppercase;}
+h2{font-size: 24px; text-transform: uppercase;}
+h3, p{font-size: 16px; line-height: 1.2; text-transform:uppercase;}
+
+a, a:hover, a:visited, a:focus{color:rgba(0,0,0,0.7);cursor:none;transition: all 0.3s ease;}
+a:hover{color:rgba(255,40,0,0.8);cursor:none;}
+
+.social a:hover > .arrow{background-image:url('../img/arrow_red.svg');opacity:0.8}
+
+.language a{margin-left:6px;}
+.language a:first-child{margin-left:0px;}
+.active{color:rgba(0,0,0,0.5);}
+.active:hover{color:rgba(0,0,0,0.5);}
+
+
+
+
+/*-------- Signature --------*/
+
+#culturalSignature{
+    position:fixed; 
+    width:100%; 
+    top:15px; 
+    z-index:5;}
+
+#habitatSignature{
+    position:fixed; 
+    width:100%; 
+    bottom:180px; 
+    z-index:5;}
+
+.signature{height:25px;}
+#habitatSignature .signature{float:right;}
+
+
+.language{float:right; border:1px solid rgba(0,0,0,0.4); padding:0 10px 0 10px; border-radius:10px; transition: all 0.3s ease; z-index:8;}
+.language:hover{border:1px solid rgba(255,40,0,0.6);}
+
+
+/*-------- Logotype --------*/
+
+#logotypeAnimationLeft{
+    position:fixed; 
+    width:100%; 
+    top:calc(50% - 130px);
+    animation:moveLogotypeLeft 6s linear infinite; 
+    overflow:hidden;}
+
+#logotypeAnimationRight{
+    position:fixed; 
+    width:100%; 
+    top:calc(50% - 130px); 
+    left:100%; 
+    animation:moveLogotypeRight 6s linear infinite; 
+    animation-delay: 3s; 
+    overflow:hidden;}
+
+.logotype{height:160px;}
+
+
+
+
+
+/*-------- Images--------*/
+
+#imageOne, #imageTwo, #imageThree {position:absolute; opacity:0; transition: all 0.3s ease;}
+#imageOne{z-index:1;}
+#imageTwo{top:50%; -ms-transform:translateY(-50%); transform:translateY(-50%); z-index:2;}
+#imageThree{bottom:55px; z-index:3;}
+
+
+
+
+
+/*-------- Sinopsis--------*/
+
+#sinopsis{position:absolute;
+border-top:1px solid rgba(0,0,0,0.4);
+border-bottom:1px solid rgba(0,0,0,0.4);
+height:110px;
+padding:15px 0 0 0;
+bottom:55px;
+z-index:0;
+}
+
+
+
+
+
+/*-------- Contacts --------*/
+
+#contacts{ 
+    position:fixed;
+    width:100%;
+    height:55px;
+    bottom:0px; 
+    z-index:5;}
+
+.mail, .location, .social{
+    width:100%;
+    height:55px;
+    overflow:hidden;
+}
+
+.mail h2, .location h2, .social h2{
+    padding-top:10px;
+    width:100%;
+    height:55px;
+}
+
+#place{margin:0 0 0 0;transition: all 0.2s ease;}
+
+
+.social h2 {text-align:right;}
+.social h2 a{float:right;}
+.arrow{float:right; display:block; margin-top:10px; margin-left:5px; width:15px; height:15px; background-image:url('../img/arrow.svg');opacity:0.7; transition: all 0.3s ease;}
+
+
+
+
+
+
+
+
+/*-------- Animations --------*/
+
+@keyframes moveLogotypeLeft {0% {transform: translateX(100%)} 100% {transform: translateX(-100%)}}
+@keyframes moveLogotypeRight {0% {transform: translateX(0%)} 100% {transform: translateX(-200%)}}
+@keyframes moveInfoPT  {0% {transform: translateX(-100%)} 100% {transform: translateX(100%)}}
+@keyframes moveInfoEN  {0% {transform: translateX(0%)} 100% {transform: translateX(200%)}}
+
+@media (prefers-reduced-motion: reduce) {
+  #logotypeAnimationLeft, #logotypeAnimationRight, #infoAnimationPT, #infoAnimationEN {
+    animation: unset !important;
+    transition: none !important;
+  }
+}
+
+
+/*-------- Media Queries --------*/
+
+
+@media screen and (min-width:1280px) and (max-width:1439px){ 
+    h2{font-size: 20px !important;}
+    h3, p{font-size: 14px !important;}
+    .signature{height:20px;}
+    #habitatSignature{bottom:155px;}
+    #logotypeAnimationLeft, #logotypeAnimationRight{top:top:calc(50% - 110px); }
+    .logotype{height:140px;}
+    #imageThree{bottom:45px;}
+    #sinopsis{height:95px;bottom:45px;}
+    #contacts, .mail, .location, .social, .mail h2, .location h2, .social h2 {height:45px;}
+    .mail h2, .location h2, .social h2 {padding-top:8px;}
+    #coordenates{padding-top:18px}
+    .arrow{margin-top:6px;}
+    
+}
+
+@media screen and (min-width:1024px) and (max-width:1279px){ 
+    h2{font-size:18px;}
+    h3, p{font-size:12px;}
+    .signature{height:18px;}
+    #habitatSignature{bottom:145px;}
+    #logotypeAnimationLeft, #logotypeAnimationRight{top:top:calc(50% - 90px); }
+    .logotype{height:120px;}
+    #imageThree{bottom:45px;}
+    #sinopsis{height:85px;bottom:45px;}
+    #contacts, .mail, .location, .social, .mail h2, .location h2, .social h2 {height:45px;}
+    .mail h2, .location h2, .social h2 {padding-top:8px;}
+    #coordenates{padding-top:18px}
+    .arrow{margin-top:6px;}
+    
+}
+
+@media screen and (min-width:680px) and (max-width:1023px){ 
+    .cursor{display:none !important;}
+    h2{font-size:16px;}
+    h3, p{font-size:12px;}
+    .signature{height:18px;}
+    #habitatSignature{bottom:190px;}
+    #logotypeAnimationLeft, #logotypeAnimationRight{top:33%; z-index:10;}
+    .logotype{height:80px;}
+    #imageOne, #imageThree {opacity:1 !important;}
+    #imageTwo {display:none;}
+    #imageThree {bottom:175px;}
+    #sinopsis{height:130px;bottom:45px;}
+    #contacts, .mail, .location, .social, .mail h2, .location h2, .social h2 {height:45px;}
+    .mail h2, .location h2, .social h2 {padding-top:11px;}
+    #coordenates{padding-top:18px}
+    .arrow{margin-top:6px;width:13px; height:13px;}
+}
+
+@media screen and (max-width:679px){ 
+    .cursor{display:none !important;}
+    h2{font-size:14px;}
+    h3, p{font-size:10px;}
+    .signature{height:16px;}
+    #habitatSignature{bottom:190px;}
+    #logotypeAnimationLeft, #logotypeAnimationRight{top:35%; z-index:10;}
+    .logotype{height:60px;}
+    #imageOne, #imageThree {opacity:1 !important;}
+    #imageTwo {display:none;}
+    #imageThree {bottom:165px;}
+    #sinopsis{height:125px;bottom:40px;}
+    #contacts, .mail, .location, .social, .mail h2, .location h2, .social h2 {height:40px;}
+    .mail h2, .location h2, .social h2 {padding-top:11px;}
+    #coordenates{padding-top:26px}
+    .arrow{margin-top:4px;width:12px; height:12px;}
+}
