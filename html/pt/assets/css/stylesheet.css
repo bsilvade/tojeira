@@ -230,7 +230,7 @@ z-index:0;
     #imageThree {bottom:165px;}
     #sinopsis{height:125px;bottom:40px; display:none;}
     #contacts{height:80px; background-color:#9b8773;}
-    .mail, .location, .social{border-top:border:1px solid rgba(0,0,0,0.4);}
+    .mail, .location, .social{border-top:1px solid rgba(0,0,0,0.4);}
     .mail, .location, .social, .mail h2, .location h2, .social h2 {height:40px;}
     .mail h2, .location h2, .social h2 {padding-top:11px;}
     #coordenates{padding-top:26px}
