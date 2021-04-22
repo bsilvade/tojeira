@@ -222,12 +222,12 @@ z-index:0;
     h2{font-size:14px;}
     h3, p{font-size:10px;}
     .signature{height:16px;}
-    #habitatSignature{bottom:190px;}
+    #habitatSignature{bottom:95px;}
     #logotypeAnimationLeft, #logotypeAnimationRight{top:35%; z-index:10;}
     .logotype{height:60px;}
     #imageOne, #imageThree {opacity:1 !important;}
     #imageTwo {display:none;}
-    #imageThree {bottom:165px;}
+    #imageThree {bottom:80px;}
     #sinopsis{height:125px;bottom:40px; display:none;}
     #contacts{height:80px; background-color:#9b8773;}
     .mail, .location, .social{border-top:1px solid rgba(0,0,0,0.4);}
