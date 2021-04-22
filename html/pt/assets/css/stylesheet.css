@@ -220,10 +220,10 @@ z-index:0;
 @media screen and (max-width:679px){ 
     .cursor{display:none !important;}
     h2{font-size:15px;}
-    h3, p{font-size:10px;}
+    h3, p{font-size:12px;}
     .signature{height:16px;}
     #habitatSignature{bottom:95px;}
-    .language{padding-bottom:15px;}
+    .language{padding-bottom:5px;}
     #logotypeAnimationLeft, #logotypeAnimationRight{top:40%; z-index:10;}
     .logotype{height:45px;}
     #imageOne, #imageThree {opacity:1 !important;}
