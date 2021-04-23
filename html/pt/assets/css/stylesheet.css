@@ -258,7 +258,7 @@ z-index:0;
     #habitatSignature{bottom:90px;}
     .signature{height:16px;}
     
-    .language{padding-top:2px;padding-bottom:2px;}
+    .language{margin-top:3px; padding-top:2px;padding-bottom:2px;}
     
     #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 40px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
     .logotype{height:45px;}
@@ -280,6 +280,32 @@ z-index:0;
     .mail, .location, .social{border-top:1px solid rgba(0,0,0,0.4);}
     .mail, .location, .social, .mail h2, .location h2, .social h2 {height:40px;}
     .mail h2, .location h2, .social h2 {padding-top:8px;}
-    #coordenates{padding-top:26px}
+    #coordenates{padding-top:23px}
+    .arrow{margin-top:4px;width:12px; height:12px;}
+}
+
+@media screen and (max-width:1024px) and (orientation : landscape){ 
+    .cursor{display:none !important;}
+    h2{font-size:15px;}
+    h3, p{font-size:12px;}
+    
+    #culturalSignature{top:10px}
+    #habitatSignature{bottom:60px;}
+    .signature{height:16px;}
+    
+    .language{margin-top:6px; padding-top:2px;padding-bottom:2px;}
+    
+    #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 55px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
+    .logotype{height:80px;}
+    
+    #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix, #imageSeven {display:none;}
+    
+    #sinopsis{display:none;}
+    
+    #contacts{height:45px; background-color:#9b8773;}
+    .mail, .location, .social{border-top:1px solid rgba(0,0,0,0.4);}
+    .mail, .location, .social, .mail h2, .location h2, .social h2 {height:40px;}
+    .mail h2, .location h2, .social h2 {padding-top:10px;}
+    #coordenates{padding-top:25px}
     .arrow{margin-top:4px;width:12px; height:12px;}
 }
