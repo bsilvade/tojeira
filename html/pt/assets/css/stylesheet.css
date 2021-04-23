@@ -4,8 +4,13 @@ body{
     margin:0px;
     padding:0px;
     background-color:#9b8773;
-    cursor:none !important;}
+    cursor:none !important;
+    transition: all 0.3s ease;
+    overflow:hidden;}
 
+#fade{
+  opacity: 0;
+}
 
 
 
