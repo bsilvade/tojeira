@@ -65,9 +65,19 @@
         document.getElementById("fade").style.opacity = 1;
          }   
     </script>
-      <script>window.onorientationchange = function(){
-   window.location.reload();
-}</script>
+      <script>
+          jQuery(document).ready(function($){
+    orientationChange();
+});
+
+function orientationChange() {
+    if(window.addEventListener) {
+        window.addEventListener("orientationchange", function() {
+            location.reload();
+        });
+    }
+}
+</script>
   </head>
    
 <body id="fade" onmousemove="myFunction(event)">
