@@ -47,12 +47,18 @@
       <script>
       function switchToCoord() {
           var visibleCoord = document.getElementById("place");
-          visibleCoord.style.margin= "-55px 0 0 0";
+          visibleCoord.style.margin = "-55px 0 0 0";
       }
           function switchToPlace() {
           var visibleCoord = document.getElementById("place");
-          visibleCoord.style.margin= "0 0 0 0";
+          visibleCoord.style.margin = "0 0 0 0";
       }
+          function openMoreInfo() {
+            var showInfo = document.getElementById("sinopsis");
+            var rotateIcon = document.getElementById("moreInfo");
+            if (showInfo.style.top == "100%"){showInfo.style.top = 0; rotateIcon.style.transform = 'rotate(45deg)';}
+            else{showInfo.style.top = "100%"; rotateIcon.style.transform = 'rotate(0deg)'}
+          }
       </script>
   </head>
    
@@ -90,21 +96,34 @@
     
 <div id="imageOne" class="grid-container full">
     <div class="grid-x">
-		<div class="small-5 cell"><img class="imageRandomOne" src="" /></div>
+		<div class="large-5 small-7 cell"><img class="imageRandomOne" src="" /></div>
 	</div>
 </div>
 <div id="imageTwo" class="grid-container full">
     <div class="grid-x">
-		<div class="small-5 small-offset-3 cell"><img class="imageRandomTwo" src="" /></div>
+		<div class="large-5 large-offset-3 small-7 small-offset-1 cell"><img class="imageRandomTwo" src="" /></div>
 	</div>
 </div>
 <div id="imageThree" class="grid-container full">
 <div class="grid-x">
-		<div class="small-5 small-offset-7 cell"><img class="imageRandomTwo" src="" /></div>
+		<div class="large-5 large-offset-7 small-7 small-offset-2 cell"><img class="imageRandomTwo" src="" /></div>
 	</div>
 </div>
-    
-    
+<div id="imageFour" class="grid-container full">
+<div class="grid-x">
+		<div class="small-7 small-offset-3 cell"><img class="imageRandomTwo" src="" /></div>
+	</div>
+</div>
+    <div id="imageFive" class="grid-container full">
+<div class="grid-x">
+		<div class="small-7 small-offset-4 cell"><img class="imageRandomTwo" src="" /></div>
+	</div>
+</div>
+    <div id="imageSix" class="grid-container full">
+<div class="grid-x">
+		<div class="small-7 small-offset-5 cell"><img class="imageRandomTwo" src="" /></div>
+	</div>
+</div>
     
     
 <div id="sinopsis" class="grid-container full">
@@ -112,9 +131,15 @@
 		<div class="small-12 cell"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget iaculis enim, vel tempus libero. Donec feugiat sit amet quam sed ultrices. Pellentesque condimentum nunc vel mauris lacinia condimentum. Sed volutpat efficitur enim, ut euismod magna consequat ut. Sed dictum sapien nisi, at congue velit varius nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras vitae risus euismod, tincidunt quam a, aliquet purus. Nullam tristique consectetur lacus in aliquet.</p></div>
 	</div>
 </div>
+
+<div id="moreInfo" class="grid-container full">
+<div class="grid-x grid-padding-x">
+        <div class="small-12 cell"><div class="moreInfoIcon" onclick="openMoreInfo()"><img class="imgInfo" src="assets/img/more_info.svg" /></div></div> 
+    	</div>
+</div>
     
 <div id="contacts" class="grid-container full">
-<div class="grid-x grid-padding-x">
+<div class="grid-x grid-padding-x"> 
 		<div class="mail medium-4 small-12 cell"><h2><a href="mailto:info@tojeira.pt">info@tojeira.pt</a></h2></div>       
         <div class="location medium-6 small-8 cell"  onmouseover="switchToCoord()" onmouseout="switchToPlace()"><h2 id="place">Mondrões, Vila Real</h2><h2 id="coordenates"><a href="https://www.google.com/maps/place/41%C2%B017'31.4%22N+7%C2%B046'52.3%22W/@41.2920556,-7.7833831,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d41.2920556!4d-7.7811944" target="_blank">41°17'31.4"N 7°46'52.3"W</a></h2></div>
     <div class="social medium-2 small-4 cell"><h2><a href="https://instagram.com/tojeira_hc" target="_blank">IG<div class="arrow"></div></a></h2></div> 
