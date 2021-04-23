@@ -60,9 +60,17 @@
             else{showInfo.style.top = "100%"; rotateIcon.style.transform = 'rotate(0deg)'}
           }
       </script>
+      <script type="text/javascript">
+        window.onload = function(){
+        document.getElementById("fade").style.opacity = 1;
+         }   
+    </script>
+      <script>window.onorientationchange = function(){
+   window.location.reload();
+}</script>
   </head>
    
-<body  onmousemove="myFunction(event)">
+<body id="fade" onmousemove="myFunction(event)">
  
 <div id="culturalSignature" class="grid-container full">
 	<div class="grid-x grid-padding-x">
