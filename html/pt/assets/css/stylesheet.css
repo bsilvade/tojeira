@@ -227,7 +227,7 @@ z-index:0;
     
 }
 
-@media screen and (min-width:640px) and (max-width:1023px){ 
+@media screen and (min-width:640px) and (max-width:1023px) and (orientation : portrait){ 
     .cursor{display:none !important;}
     h2{font-size:16px;}
     h3, p{font-size:12px;}
@@ -255,7 +255,7 @@ z-index:0;
     .arrow{margin-top:6px;width:13px; height:13px;}
 }
 
-@media screen and (max-width:639px){ 
+@media screen and (max-width:639px) and (orientation : portrait){ 
     .cursor{display:none !important;}
     h2{font-size:15px;}
     h3, p{font-size:12px;}
