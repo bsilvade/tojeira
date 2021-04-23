@@ -5,7 +5,8 @@ body{
     padding:0px;
     background-color:#9b8773;
     cursor:none !important;
-    transition: all 1s ease;}
+    transition: all 1s ease;
+overflow:hidden;}
 
 #fade{
   opacity: 0;
