@@ -9,15 +9,7 @@
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rrz6ojb.css">
     <script src="http://code.jquery.com/jquery-2.2.4.js"></script>
-    <script>  
-    $(function () {
-  	$("body").mousemove(function (m) {
-    $(".cursor").show().css({
-      "top": m.clientY-20,
-      "left": m.clientX-20,});
-      })
-    });
- 	</script>
+    
     <script>  
     function myFunction(e) {
     var x = e.screenX*100/screen.width;
@@ -161,6 +153,15 @@
     
 <script src="assets/js/vendor.js"></script>
 <script src="assets/js/foundation.js"></script>
+	<script>  
+    $(function () {
+  	$("body").mousemove(function (m) {
+    $(".cursor").show().css({
+      "top": m.clientY-20,
+      "left": m.clientX-20,});
+      })
+    });
+ 	</script>
     <script>  
       $('.imageRandomOne').each(function() {
       var num = Math.floor(Math.random() * 2 + 1),
