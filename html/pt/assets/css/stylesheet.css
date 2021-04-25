@@ -1,163 +1,101 @@
-/*-------- Body / Background --------*/
+/*-------- Body --------*/
 
 body{
     margin:0px;
     padding:0px;
     background-color:#9b8773;
     cursor:none !important;
-    transition: all 1s ease;
-overflow:hidden;}
+    transition: all 0.3s ease;
+    overflow:hidden;}
 
-#fade{
-  opacity: 0;
-}
-
+#entry{opacity: 0;}
 
 
 /*-------- Mouse / Cursor --------*/
 
-.canvas{position:fixed; width:100%; height:90%; z-index:4}
-
-.cursor{position:absolute;
-width:200px;
-height:200px;
-}
+.canvas{position:fixed; width:100%; height:90%; z-index:3;}
+.cursor{position:absolute; width:200px; height:200px;}
 
 
+/*-------- Typography + Links --------*/
 
+h1, h2, h3, p {font-family:nimbus-sans-extended, sans-serif; text-transform: uppercase; color:rgba(0,0,0,0.7);}
 
-/*-------- Typography / Links --------*/
+h1{font-size: 32px;}
+h2{font-size: 21px;}
+h3, p{font-size: 15px; line-height: 1.2;}
 
-h1, h2, h3, p {font-family:nimbus-sans-extended, sans-serif; color:rgba(0,0,0,0.7);}
-
-h1{font-size: 36px; text-transform: uppercase;}
-h2{font-size: 24px; text-transform: uppercase;}
-h3, p{font-size: 16px; line-height: 1.2; text-transform:uppercase;}
-
-a, a:hover, a:visited, a:focus{color:rgba(0,0,0,0.7);cursor:none;transition: all 0.3s ease;}
-a:hover{color:rgba(255,40,0,0.8);cursor:none;}
-
-.social a:hover > .arrow{background-image:url('../img/arrow_red.svg');opacity:0.8}
+a, a:hover, a:visited, a:focus{color:rgba(0,0,0,0.7); cursor:none; transition: all 0.3s ease;}
+a:hover{color:rgba(255,40,0,0.8); cursor:none;}
 
 .language a{margin-left:6px;}
 .language a:first-child{margin-left:0px;}
 .active{color:rgba(0,0,0,0.5);}
 .active:hover{color:rgba(0,0,0,0.5);}
 
+#social a:hover > .arrow{background-image:url('../img/arrow_red.svg'); opacity:0.8;}
+
+/*-------- Signatures Block :: Signature + Language Switch + More Info Button --------*/
+
+#signaturesBlock{z-index:6;}
+
+#topElements, #bottomElements{position:fixed; width:100%; z-index:6;}
+#topElements{top:15px;}
+#bottomElements{bottom:160px;}
+#topSignature .signature, #bottomSignature .signature{height:22px;}
+#bottomSignature .signature{float:right;}
+
+#languageSwitch .language{float:right; border:1px solid rgba(0,0,0,0.4); padding:0 10px 0 10px; border-radius:10px; transition: all 0.3s ease;}
+#languageSwitch .language:hover{border:1px solid rgba(255,40,0,0.6);}
+
+#moreInfo {display:none; bottom:90px; transition: all 0.3s ease;}
+#moreInfoIcon {display:block; width:16px; height:16px; opacity:0.7; transition: all 0.1s ease; transform:rotate(0deg);}
 
 
+/*-------- Logotype Block [Animated] --------*/
 
-/*-------- Signature --------*/
+#logotypeBlock{z-index:0;}
 
-#culturalSignature{
-    position:fixed; 
-    width:100%; 
-    top:15px; 
-    z-index:5;}
-
-#habitatSignature{
-    position:fixed; 
-    width:100%; 
-    bottom:180px; 
-    z-index:5;}
-
-.signature{height:25px;}
-#habitatSignature .signature{float:right;}
+#logotypeAnimationLeft, #logotypeAnimationRight{position:fixed; top:calc(50% - 145px); -ms-transform:translateY(-50%); transform:translateY(-50%); width:100%; overflow:hidden;}
+#logotypeAnimationLeft {animation: moveLogotypeLeft 6s linear infinite;}
+#logotypeAnimationRight {left:100%; animation: moveLogotypeRight 6s linear infinite; animation-delay: 3s;}
+#logotypeAnimationLeft .logotype, #logotypeAnimationRight .logotype{height:145px;}
 
 
-.language{float:right; border:1px solid rgba(0,0,0,0.4); padding:0 10px 0 10px; border-radius:10px; transition: all 0.3s ease; z-index:8;}
-.language:hover{border:1px solid rgba(255,40,0,0.6);}
+/*-------- Images Block --------*/
+
+#imagesBlock{z-index:1;}
+
+#imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix {position:absolute; opacity:0; transition: all 0.3s ease; z-index:3;}
+#imageOne{top:calc(0% - 0px); -ms-transform:translateY(-0%); transform:translateY(-0%);}
+#imageTwo{top:calc(50% - 72px); -ms-transform:translateY(-50%); transform:translateY(-50%);}
+#imageThree{top:calc(100% - 144px); -ms-transform:translateY(-100%); transform:translateY(-100%);}
 
 
-/*-------- Logotype --------*/
+/*-------- Sinopsis Block--------*/
 
-#logotypeAnimationLeft{
-    position:fixed; 
-    width:100%; 
-    top:calc(50% - 130px);
-    animation:moveLogotypeLeft 6s linear infinite; 
-    overflow:hidden;}
-
-#logotypeAnimationRight{
-    position:fixed; 
-    width:100%; 
-    top:calc(50% - 130px); 
-    left:100%; 
-    animation:moveLogotypeRight 6s linear infinite; 
-    animation-delay: 3s; 
-    overflow:hidden;}
-
-.logotype{height:160px;}
-
-
-
-
-
-/*-------- Images--------*/
-
-#imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix {position:absolute; opacity:0; transition: all 0.3s ease;}
-#imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix {z-index:3;}
-#imageTwo{top:calc(50% - 82px); -ms-transform:translateY(-50%); transform:translateY(-50%);}
-#imageThree{top:calc(100% - 164px); -ms-transform:translateY(-100%); transform:translateY(-100%);}
-
-
-
-
-
-/*-------- Sinopsis--------*/
+#sinopsisBlock{z-index:2;}
 
 #sinopsis{position:absolute;
 border-top:1px solid rgba(0,0,0,0.4);
 border-bottom:1px solid rgba(0,0,0,0.4);
-height:110px;
-padding:15px 0 0 0;
-bottom:55px;
-transition: all 0.8s ease;
-z-index:0;
-}
+height:100px;
+padding:15px 15px 0 15px;
+bottom:45px;
+transition: all 0.8s ease;}
 
 
+/*-------- Contacts Block --------*/
 
-/*-------- More Info--------*/
+#contactsBlock{position:fixed; width:100%; height:45px; bottom:0px; z-index:4;}
+#mail, #location, #social{height:45px; overflow:hidden;}
+#mail h2, #location h2, #social h2{padding-top:8px; width:100%; height:45px;}
+#place{margin:0 0 0 0; transition: all 0.2s ease;}
+#coordenates{margin-top:10px;}
 
-#moreInfo {display:none; position:absolute; bottom:90px; transition: all 0.3s ease; z-index:20;}
-.imgInfo {display:block; width:16px; height:16px; opacity:0.7; transition: all 0.1s ease; transform:rotate(0deg);}
-
-/*-------- Contacts --------*/
-
-#contacts{ 
-    position:fixed;
-    width:100%;
-    height:55px;
-    bottom:0px; 
-    z-index:5;}
-
-
-
-.mail, .location, .social{
-    width:100%;
-    height:55px;
-    overflow:hidden;
-}
-
-.mail h2, .location h2, .social h2{
-    padding-top:10px;
-    width:100%;
-    height:55px;
-}
-
-#place{margin:0 0 0 0;transition: all 0.2s ease;}
-
-
-.social h2 {text-align:right;}
-.social h2 a{float:right;}
-.arrow{float:right; display:block; margin-top:10px; margin-left:5px; width:15px; height:15px; background-image:url('../img/arrow.svg');opacity:0.7; transition: all 0.3s ease;}
-
-
-
-
-
-
+#social h2 {text-align:right;}
+#social h2 a{float:right;}
+#social .arrow{float:right; display:block; margin-top:8px; margin-left:5px; width:15px; height:15px; background-image:url('../img/arrow.svg');opacity:0.7; transition: all 0.3s ease;}
 
 
 /*-------- Animations --------*/
@@ -173,144 +111,104 @@ z-index:0;
 @keyframes imageFive {0% {opacity: 0;} 39% {opacity: 0;} 40% {opacity: 1;} 89% {opacity: 1;} 90% {opacity: 0;}}
 @keyframes imageSix {0% {opacity: 0;} 44% {opacity: 0;} 45% {opacity: 1;} 89% {opacity: 1;} 90% {opacity: 0;}}
 
-@media (prefers-reduced-motion: reduce) {
-  #logotypeAnimationLeft, #logotypeAnimationRight, #infoAnimationPT, #infoAnimationEN {
-    animation: unset !important;
-    transition: none !important;
-  }
-}
+@media (prefers-reduced-motion: reduce) {#logotypeAnimationLeft, #logotypeAnimationRight {animation: unset !important; transition: none !important;}}
 
 
 /*-------- Media Queries --------*/
 
 
 @media screen and (min-width:1280px) and (max-width:1439px){ 
-    h2{font-size: 20px !important;}
-    h3, p{font-size: 14px !important;}
-    .signature{height:20px;}
-    #habitatSignature{bottom:155px;}
-    #logotypeAnimationLeft, #logotypeAnimationRight{top:top:calc(50% - 110px); }
-    .logotype{height:140px;}
-    #imageThree{bottom:45px;}
-    #sinopsis{height:95px;bottom:45px;}
-    #contacts, .mail, .location, .social, .mail h2, .location h2, .social h2 {height:45px;}
-    .mail h2, .location h2, .social h2 {padding-top:8px;}
-    #coordenates{padding-top:18px}
-    .arrow{margin-top:6px;}
+    h2{font-size: 20px;}
+    h3, p{font-size: 14px;}
+    #topSignature .signature, #bottomSignature .signature{height:20px;}
+    #bottomElements{bottom:155px;}
+    #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 140px); -ms-transform:translateY(-50%); transform:translateY(-50%); }
+    #logotypeAnimationLeft .logotype, #logotypeAnimationRight .logotype{height:140px;}
+    #imageTwo{top:calc(50% - 69px); -ms-transform:translateY(-50%); transform:translateY(-50%);}
+    #imageThree{top:calc(100% - 139px); -ms-transform:translateY(-100%); transform:translateY(-100%);}
+    #sinopsis{height:95px;}
+    #social .arrow{margin-top:6px;}
     
 }
 
 @media screen and (min-width:1024px) and (max-width:1279px){ 
     body{cursor:auto !important;}
     .cursor{display:none !important;}
+    a, a:hover{cursor:pointer !important;}
     h2{font-size:18px;}
     h3, p{font-size:12px;}
-    .signature{height:18px;}
-    #habitatSignature{bottom:145px;}
-    #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 130px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
-    .logotype{height:120px;}
-    
-    #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix, #imageSeven {opacity:0 !important;}
-    #imageOne {top:calc(0% - 0px); -ms-transform:translateY(-0%); transform:translateY(-0%); animation: imageOne 3s infinite;
-        animation-duration:5s;}
+    #topSignature .signature, #bottomSignature .signature{height:18px;}
+    #bottomElements{bottom:145px;}
+    #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 120px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
+    #logotypeAnimationLeft .logotype, #logotypeAnimationRight .logotype{height:120px;}
+    #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix {opacity:0 !important;}
+    #imageOne {top:calc(0% - 0px); -ms-transform:translateY(-0%); transform:translateY(-0%); animation: imageOne 3s infinite; animation-duration:5s;}
     #imageTwo {top:calc(50% - 65px); -ms-transform:translateY(-50%); transform:translateY(-50%); animation: imageTwo 3s infinite; animation-duration:5s;}
     #imageThree {top:calc(100% - 129px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageThree 3s infinite; animation-duration:5s;}
     #imageFour, #imageFive, #imageSix {display:none;}
-    
-    #sinopsis{height:85px; bottom:45px;}
-    
-    #contacts{height:45px; background-color:#9b8773;}
-    .mail, .location, .social, .mail h2, .location h2, .social h2 {height:45px;}
-    .mail h2, .location h2, .social h2 {padding-top:8px;}
-    #coordenates{padding-top:18px}
-    .arrow{margin-top:6px;}
+    #sinopsis{height:85px;}
+    #mail h2, #location h2, #social h2{padding-top:12px;}
+    #social .arrow{margin-top:6px; width:13px; height:13px;}
     
 }
 
-@media screen and (min-width:640px) and (max-width:1023px) and (orientation : portrait){ 
+@media screen and (min-width:640px) and (max-width:1023px){ 
+    body{cursor:auto !important;}
     .cursor{display:none !important;}
+    a, a:hover{cursor:pointer !important;}
     h2{font-size:16px;}
     h3, p{font-size:12px;}
-    .signature{height:18px;}
-    #habitatSignature{bottom:190px;}
-    #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 65px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
-    .logotype{height:80px;}
-   
-    
-    #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix, #imageSeven {opacity:0 !important;}
-    #imageOne {top:calc(0% - 0px); -ms-transform:translateY(-0%); transform:translateY(-0%); animation: imageOne 3s infinite;
-        animation-duration:5s;}
+    #topElements{top:10px;}
+    #bottomElements{bottom:185px;}
+    #topElements .language{margin-top:5px;}
+    #topSignature .signature, #bottomSignature .signature{height:18px;}
+    #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 80px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
+    #logotypeAnimationLeft .logotype, #logotypeAnimationRight .logotype{height:80px;}
+    #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix {opacity:0 !important;}
+    #imageOne {top:calc(0% - 0px); -ms-transform:translateY(-0%); transform:translateY(-0%); animation: imageOne 3s infinite; animation-duration:5s;}
     #imageTwo {top:calc(20% - 35px); -ms-transform:translateY(-20%); transform:translateY(-20%); animation: imageTwo 3s infinite; animation-duration:5s;}
     #imageThree {top:calc(40% - 70px); -ms-transform:translateY(-40%); transform:translateY(-40%); animation: imageThree 3s infinite; animation-duration:5s;}
     #imageFour {top:calc(60% - 105px); -ms-transform:translateY(-60%); transform:translateY(-60%); animation: imageFour 3s infinite; animation-duration:5s;}
     #imageFive {top:calc(80% - 140px); -ms-transform:translateY(-80%); transform:translateY(-80%); animation: imageFive 3s infinite; animation-duration:5s;}
     #imageSix {top:calc(100% - 174px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageSix 3s infinite; animation-duration:5s;}
-    
-    #sinopsis{height:130px; bottom:45px;}
-    
-    #contacts{height:45px; background-color:#9b8773;}
-    .mail, .location, .social, .mail h2, .location h2, .social h2 {height:45px;}
-    .mail h2, .location h2, .social h2 {padding-top:10px;}
-    #coordenates{padding-top:20px}
-    .arrow{margin-top:6px;width:13px; height:13px;}
+    #sinopsis{height:130px;}
+    #mail h2, #location h2, #social h2{padding-top:11px;}
+    #social .arrow{margin-top:6px; width:12px; height:12px;}
 }
 
-@media screen and (max-width:639px) and (orientation : portrait){ 
+@media screen and (max-width:639px){ 
+    body{cursor:auto !important;}
     .cursor{display:none !important;}
+    a, a:hover{cursor:pointer !important;}
     h2{font-size:15px;}
     h3, p{font-size:12px;}
-    #culturalSignature{top:10px}
-    #habitatSignature{bottom:90px;}
-    .signature{height:16px;}
-    
-    .language{margin-top:3px; padding-top:2px;padding-bottom:2px;}
-    
-    #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 40px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
-    .logotype{height:45px;}
-    
-    #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix, #imageSeven {opacity:0 !important;}
-    #imageOne {top:calc(0% - 0px); -ms-transform:translateY(-0%); transform:translateY(-0%); animation: imageOne 3s infinite;
-        animation-duration:5s;}
+    #topElements{top:10px}
+    #bottomElements{bottom:90px;}
+    #topElements .language{margin-top:5px;}
+    #topSignature .signature, #bottomSignature .signature{height:16px;}
+    #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 45px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
+    #logotypeAnimationLeft .logotype, #logotypeAnimationRight .logotype{height:45px;}
+    #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix {opacity:0 !important;}
+    #imageOne {top:calc(0% - 0px); -ms-transform:translateY(-0%); transform:translateY(-0%); animation: imageOne 3s infinite;animation-duration:5s;}
     #imageTwo {top:calc(20% - 16px); -ms-transform:translateY(-20%); transform:translateY(-20%); animation: imageTwo 3s infinite; animation-duration:5s;}
     #imageThree {top:calc(40% - 32px); -ms-transform:translateY(-40%); transform:translateY(-40%); animation: imageThree 3s infinite; animation-duration:5s;}
     #imageFour {top:calc(60% - 48px); -ms-transform:translateY(-60%); transform:translateY(-60%); animation: imageFour 3s infinite; animation-duration:5s;}
     #imageFive {top:calc(80% - 64px); -ms-transform:translateY(-80%); transform:translateY(-80%); animation: imageFive 3s infinite; animation-duration:5s;}
     #imageSix {top:calc(100% - 79px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageSix 3s infinite; animation-duration:5s;}
-    
     #sinopsis{height:100%; top:100%; background-color:#9b8773; border:0; z-index:4;}
     #sinopsis p{padding-top:40px; line-height:1.4;}
     #moreInfo {display:block;}
-    
-    #contacts{height:80px; background-color:#9b8773;}
-    .mail, .location, .social{border-top:1px solid rgba(0,0,0,0.4);}
-    .mail, .location, .social, .mail h2, .location h2, .social h2 {height:40px;}
-    .mail h2, .location h2, .social h2 {padding-top:8px;}
-    #coordenates{padding-top:23px}
-    .arrow{margin-top:4px;width:12px; height:12px;}
+    #contactsBlock{height:80px; background-color:#9b8773;}
+    #mail, #location, #social{border-top:1px solid rgba(0,0,0,0.4); height:40px;}
+    #mail h2, #location h2, #social h2{padding-top:8px;}
+    #social .arrow{margin-top:4px;width:12px; height:12px;}
 }
 
-@media screen and (max-width:1024px) and (orientation : landscape){ 
-    .cursor{display:none !important;}
-    h2{font-size:15px;}
-    h3, p{font-size:12px;}
-    
-    #culturalSignature{top:10px}
-    #habitatSignature{bottom:60px;}
-    .signature{height:16px;}
-    
-    .language{margin-top:6px; padding-top:2px;padding-bottom:2px;}
-    
+@media screen and (min-width:640px) and (max-width:1024px) and (orientation : landscape){ 
+    #bottomElements{bottom:55px;}
     #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 55px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
-    .logotype{height:80px;}
-    
-    #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix, #imageSeven {display:none;}
-    
-    #sinopsis{display:none;}
-    
-    #contacts{height:45px; background-color:#9b8773;}
-    .mail, .location, .social{border-top:1px solid rgba(0,0,0,0.4);}
-    .mail, .location, .social, .mail h2, .location h2, .social h2 {height:40px;}
-    .mail h2, .location h2, .social h2 {padding-top:10px;}
-    #coordenates{padding-top:25px}
-    .arrow{margin-top:4px;width:12px; height:12px;}
+    #imagesBlock{display:none;}
+    #sinopsisBlock{display:none;}
+    #contactsBlock{height:45px; background-color:#9b8773;}
+    #mail, #location, #social{border-top:1px solid rgba(0,0,0,0.4); height:40px;}
 }
