@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,173 +8,146 @@
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rrz6ojb.css">
-    <script src="http://code.jquery.com/jquery-2.2.4.js"></script>
-    
-    <script>  
-    function myFunction(e) {
-    var x = e.screenX*100/screen.width;
-    var y = e.screenY*100/screen.height;
-    if (x >=0 && x <=100 && y >=0 && y <=90){
-     if (x >=0 && x <=30 && y >=0 && y <=30){
-        document.getElementById("imageOne").style.opacity = 1;
-     }
-        if (x >=30 && x <=60 && y >=30 && y <=60){
-        document.getElementById("imageTwo").style.opacity = 1;
-     }
-        if (x >=60 && x <=100 && y >=60 && y <=90){
-        document.getElementById("imageThree").style.opacity = 1;
-     }  
-        if (x >=60 && x <=100 && y >=0 && y <=30){
-        document.getElementById("imageOne").style.opacity = 0;
-           document.getElementById("imageTwo").style.opacity = 0;
-           document.getElementById("imageThree").style.opacity = 0;
-     }  
-        
-     }else{document.getElementById("imageOne").style.opacity = 0;
-           document.getElementById("imageTwo").style.opacity = 0;
-           document.getElementById("imageThree").style.opacity = 0;
-      }
-      }
-      </script>
-      <script>
-      function switchToCoord() {
-          var visibleCoord = document.getElementById("place");
-          visibleCoord.style.margin = "-55px 0 0 0";
-      }
-          function switchToPlace() {
-          var visibleCoord = document.getElementById("place");
-          visibleCoord.style.margin = "0 0 0 0";
-      }
-          function openMoreInfo() {
-            var showInfo = document.getElementById("sinopsis");
-            var rotateIcon = document.getElementById("moreInfo");
-            if (showInfo.style.top == "100%"){showInfo.style.top = 0; rotateIcon.style.transform = 'rotate(45deg)';}
-            else{showInfo.style.top = "100%"; rotateIcon.style.transform = 'rotate(0deg)'}
-          }
-      </script>
-      <script type="text/javascript">
-        window.onload = function(){
-        document.getElementById("fade").style.opacity = 1;
-         }   
-    </script>
-      <script>
-          window.onorientationchange = function(){
-   window.location.reload();
-}
-</script>
-  </head>
+    <script src="http://code.jquery.com/jquery-2.2.4.js"></script> 
+  	<script src="assets/js/general.js"></script>
+</head>
    
-<body id="fade" onmousemove="myFunction(event)">
+
+<body id="entry" onmousemove="cursorElement(event)">
  
-<div id="culturalSignature" class="grid-container full">
-	<div class="grid-x grid-padding-x">
-		<div class="small-6 cell"><img class="signature" src="assets/img/tojeira_cultural_signature.svg" /></div>
-        <div class="small-6 cell"><h3 class="language"><a class="active" href="pt/">PT</a><a href="en/">EN</a><a href="es/">ES</a></h3></div>
-	</div>
-</div> 
-<div id="habitatSignature" class="grid-container full">
-	<div class="grid-x grid-padding-x">
-		<div class="small-6 small-offset-6 cell"><img class="signature" src="assets/img/tojeira_habitat_signature.svg" /></div>
-	</div>
-</div> 
+<!-- Signatures Block [+ Language Swich + More Info Button] -->
 
-    
-    
-    
-<div id="logotypeAnimationBlock" class="grid-container full">
-	<div id="logotypeAnimationLeft" class="grid-x">
-		<div class="small-12 cell">
-			<img class="logotype" src="assets/img/tojeira_logotype.svg" />
+<div id="signaturesBlock">
+	<div id ="topElements" class="grid-container full">
+		<div class="grid-x grid-padding-x">
+			<div id="topSignature" class="small-6 cell"><img class="signature" src="assets/img/tojeira_cultural_signature.svg" /></div>
+        	<div id="languageSwitch" class="small-6 cell"><h3 class="language"><a class="active" href="pt/">PT</a><a href="en/">EN</a><a href="es/">ES</a></h3></div>
 		</div>
-	</div>
-	<div id="logotypeAnimationRight" class="grid-x">
-		<div class="small-12 cell">
-			<img class="logotype" src="assets/img/tojeira_logotype.svg" />
-		</div>
-</div>
-    </div>
-    
-    
-    
-<div id="imageOne" class="grid-container full">
-    <div class="grid-x">
-		<div class="large-5 small-7 cell"><img class="imageRandomOne" src="" /></div>
-	</div>
-</div>
-<div id="imageTwo" class="grid-container full">
-    <div class="grid-x">
-		<div class="large-5 large-offset-3 small-7 small-offset-1 cell"><img class="imageRandomTwo" src="" /></div>
-	</div>
-</div>
-<div id="imageThree" class="grid-container full">
-<div class="grid-x">
-		<div class="large-5 large-offset-7 small-7 small-offset-2 cell"><img class="imageRandomTwo" src="" /></div>
-	</div>
-</div>
-<div id="imageFour" class="grid-container full">
-<div class="grid-x">
-		<div class="small-7 small-offset-3 cell"><img class="imageRandomTwo" src="" /></div>
-	</div>
-</div>
-    <div id="imageFive" class="grid-container full">
-<div class="grid-x">
-		<div class="small-7 small-offset-4 cell"><img class="imageRandomTwo" src="" /></div>
-	</div>
-</div>
-    <div id="imageSix" class="grid-container full">
-<div class="grid-x">
-		<div class="small-7 small-offset-5 cell"><img class="imageRandomTwo" src="" /></div>
-	</div>
-</div>
-    
-    
-<div id="sinopsis" class="grid-container full">
-    <div class="grid-x grid-padding-x">
-		<div class="small-12 cell"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget iaculis enim, vel tempus libero. Donec feugiat sit amet quam sed ultrices. Pellentesque condimentum nunc vel mauris lacinia condimentum. Sed volutpat efficitur enim, ut euismod magna consequat ut. Sed dictum sapien nisi, at congue velit varius nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras vitae risus euismod, tincidunt quam a, aliquet purus. Nullam tristique consectetur lacus in aliquet.</p></div>
-	</div>
-</div>
-
-<div id="moreInfo" class="grid-container full">
-<div class="grid-x grid-padding-x">
-        <div class="small-12 cell"><div class="moreInfoIcon" onclick="openMoreInfo()"><img class="imgInfo" src="assets/img/more_info.svg" /></div></div> 
+	</div> 
+	<div id ="bottomElements" class="grid-container full">
+		<div class="grid-x grid-padding-x">
+			<div id="moreInfo" class="small-6 cell"><div onclick="openMoreInfo()"><img id="moreInfoIcon" class="icon" src="assets/img/more_info.svg" /></div></div> 
+			<div id="bottomSignature" class="medium-12 small-6 cell"><img class="signature" src="assets/img/tojeira_habitat_signature.svg" /></div>
     	</div>
-</div>
-    
-<div id="contacts" class="grid-container full">
-<div class="grid-x grid-padding-x"> 
-		<div class="mail medium-4 small-12 cell"><h2><a href="mailto:info@tojeira.pt">info@tojeira.pt</a></h2></div>       
-        <div class="location medium-6 small-8 cell"  onmouseover="switchToCoord()" onmouseout="switchToPlace()"><h2 id="place">Mondrões, Vila Real</h2><h2 id="coordenates"><a href="https://www.google.com/maps/place/41%C2%B017'31.4%22N+7%C2%B046'52.3%22W/@41.2920556,-7.7833831,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d41.2920556!4d-7.7811944" target="_blank">41°17'31.4"N 7°46'52.3"W</a></h2></div>
-    <div class="social medium-2 small-4 cell"><h2><a href="https://instagram.com/tojeira_hc" target="_blank">IG<div class="arrow"></div></a></h2></div> 
 	</div>
 </div>
     
-<div class="canvas" onmousemove="myFunction(event)"><img src="assets/img/mouse.png" class="cursor"/></div>
+    
+<!-- Logotype Block [Animated] -->
+    
+<div id="logotypeBlock">   
+	<div class="grid-container full">
+		<div class="grid-x">
+			<div id="logotypeAnimationLeft" class="small-12 cell">
+				<img class="logotype" src="assets/img/tojeira_logotype.svg" />
+			</div>
+		</div>
+		<div class="grid-x">
+			<div id="logotypeAnimationRight" class="small-12 cell">
+				<img class="logotype" src="assets/img/tojeira_logotype.svg" />
+			</div>
+		</div>
+    </div>
+</div>
+    
 
+<!-- Images Block -->
+    
+<div id="imagesBlock">     
+	<div class="grid-container full">
+    	<div class="grid-x">
+			<div id="imageOne" class="large-5 small-7 cell"><img class="randomFirstImage" src="" /></div>
+		</div>
+	</div>
+	<div class="grid-container full">
+    	<div class="grid-x">
+			<div id="imageTwo" class="large-5 large-offset-3 small-7 small-offset-1 cell"><img class="randomOtherImage" src="" /></div>
+		</div>
+	</div>
+	<div class="grid-container full">
+		<div class="grid-x">
+			<div id="imageThree"class="large-5 large-offset-7 small-7 small-offset-2 cell"><img class="randomOtherImage" src="" /></div>
+		</div>
+	</div>
+	<div class="grid-container full">
+		<div class="grid-x">
+			<div id="imageFour" class="small-7 small-offset-3 cell"><img class="randomOtherImage" src="" /></div>
+		</div>
+	</div>
+    <div class="grid-container full">
+		<div class="grid-x">
+			<div id="imageFive" class="small-7 small-offset-4 cell"><img class="randomOtherImage" src="" /></div>
+		</div>
+	</div>
+    <div class="grid-container full">
+		<div class="grid-x">
+			<div id="imageSix" class="small-7 small-offset-5 cell"><img class="randomOtherImage" src="" /></div>
+		</div>
+	</div>
+</div>
+    
+    
+<!-- Sinopsis Block -->
+    
+<div id="sinopsisBlock">  
+<div class="grid-container full">
+    <div class="grid-x grid-padding-x">
+		<div id="sinopsis" class="small-12 cell"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget iaculis enim, vel tempus libero. Donec feugiat sit amet quam sed ultrices. Pellentesque condimentum nunc vel mauris lacinia condimentum. Sed volutpat efficitur enim, ut euismod magna consequat ut. Sed dictum sapien nisi, at congue velit varius nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras vitae risus euismod, tincidunt quam a, aliquet purus. Nullam tristique consectetur lacus in aliquet.</p></div>
+	</div>
+</div>
+</div>
+
+
+<!-- Contacts Block -->
+  
+<div id="contactsBlock">   
+<div class="grid-container full">
+<div class="grid-x grid-padding-x"> 
+		<div id="mail" class="medium-4 small-12 cell"><h2><a href="mailto:info@tojeira.pt">info@tojeira.pt</a></h2></div>       
+        <div id="location" class="medium-6 small-8 cell" onmouseover="switchToCoord()" onmouseout="switchToPlace()"><h2 id="place">Mondrões, Vila Real</h2><h2 id="coordenates"><a href="https://www.google.com/maps/place/41%C2%B017'31.4%22N+7%C2%B046'52.3%22W/@41.2920556,-7.7833831,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d41.2920556!4d-7.7811944" target="_blank">41°17'31.4"N 7°46'52.3"W</a></h2></div>
+    	<div id="social" class="medium-2 small-4 cell"><h2><a href="https://instagram.com/tojeira_hc" target="_blank">IG<div class="arrow"></div></a></h2></div> 
+	</div>
+</div>
+</div>
+
+
+<!-- Cursor Pointer -->
+    
+<div class="canvas"><img src="assets/img/mouse.png" class="cursor"/></div>
+
+
+
+<!-- Ending JavaScript -->
     
 <script src="assets/js/vendor.js"></script>
 <script src="assets/js/foundation.js"></script>
-	<script>  
+<script type="text/javascript"> 
+      
+    // Random Images
+    // Image TOP LEFT
+    $('.randomFirstImage').each(function() {
+      	var num = Math.floor(Math.random() * 2 + 1),
+      	img = $(this);
+      	img.attr('src', 'assets/img/tojeira_0' + num + '.jpg');
+      	img.attr('alt', 'Src: ' + img.attr('src'));});
+	// Other Images
+    $('.randomOtherImage').each(function() {
+    	var num = Math.floor(Math.random() * 4 + 1),
+    	img = $(this);
+      	img.attr('src', 'assets/img/tojeira_0' + num + '.jpg');
+      	img.attr('alt', 'Src: ' + img.attr('src'));});
+      
+      
+    // Cursor Pointer
     $(function () {
-  	$("body").mousemove(function (m) {
-    $(".cursor").show().css({
-      "top": m.clientY-20,
-      "left": m.clientX-20,});
-      })
+  		$("body").mousemove(function (p) {
+    		$(".cursor").show().css({
+      			"top": p.clientY-8,
+      			"left": p.clientX-60,
+      		});
+      	})
     });
- 	</script>
-    <script>  
-      $('.imageRandomOne').each(function() {
-      var num = Math.floor(Math.random() * 2 + 1),
-      img = $(this);
-      img.attr('src', 'assets/img/tojeira_0' + num + '.jpg');
-      img.attr('alt', 'Src: ' + img.attr('src'));});
-      </script>
-    <script>  
-      $('.imageRandomTwo').each(function() {
-      var num = Math.floor(Math.random() * 4 + 1),
-      img = $(this);
-      img.attr('src', 'assets/img/tojeira_0' + num + '.jpg');
-      img.attr('alt', 'Src: ' + img.attr('src'));});
-      </script>
+      
+</script>
 </body>
 </html>
