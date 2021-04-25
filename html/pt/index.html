@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rrz6ojb.css">
     <script src="http://code.jquery.com/jquery-2.2.4.js"></script> 
-  	<script src="assets/js/general.js"></script>
+    <script src="assets/js/general.js"></script>
+    <script type="text/javascript">
+	// Reload when Orientation Change
+	jQuery(document).ready(function($){orientationChange();});
+	function orientationChange() {if(window.addEventListener) {window.addEventListener("orientationchange", function() {location.reload();});}}
+	</script>
 </head>
    
 
