@@ -1,10 +1,6 @@
 // Initial FadeIn
 window.onload = function(){document.getElementById("entry").style.opacity = 1;}  
 
-// Reload when Orientation Change
-jQuery(document).ready(function($){orientationChange();});
-function orientationChange() {if(window.addEventListener) {window.addEventListener("orientationchange", function() {location.reload();});}}
-
 // Images display [1280 - ]         
 function cursorElement(e) {
 	var x = e.screenX*100/screen.width;
