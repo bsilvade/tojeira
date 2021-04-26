@@ -1,14 +1,21 @@
 
+html {
+  overflow: hidden;
+  width: 100%;
+}
 
 /*-------- Body --------*/
 
 body{
+    height: 100%;
+    position: fixed;
     margin:0px;
     padding:0px;
     background-color:#9b8773;
     cursor:none !important;
     transition: all 1s ease;
-    overflow:hidden;}
+    overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;}
 
 #entry{opacity: 0; transition: all 1s ease;}
 
