@@ -15,9 +15,7 @@ body{
     background-color:#9b8773;
     cursor:none !important;
     transition: all 1s ease;
-    overflow: hidden;
-    overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;}
+    overflow: hidden;}
 
 #entry{opacity: 0; transition: all 1s ease;}
 
