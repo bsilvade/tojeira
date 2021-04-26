@@ -17,18 +17,6 @@ body{
 #entry{opacity: 0; transition: all 1s ease;}
 
 
-#mainContent{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
-}
-
-
 /*-------- Mouse / Cursor --------*/
 
 .canvas{position:fixed; width:100%; height:90%; z-index:3;}
