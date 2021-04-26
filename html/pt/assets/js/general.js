@@ -1,6 +1,15 @@
 // Initial FadeIn
 window.onload = function(){document.getElementById("entry").style.opacity = 1;}  
 
+// Refresh Page when Chinging Orientation
+window.addEventListener('orientationchange', function () {
+    var originalBodyStyle = getComputedStyle (document.body).getPropertyValue('display');
+    document.body.style.display='none';
+    setTimeout(function () {
+      document.body.style.display = originalBodyStyle;
+    }, 10);
+  });
+
 // Images display [1280 - ]         
 function cursorElement(e) {
 	var x = e.screenX*100/screen.width;
