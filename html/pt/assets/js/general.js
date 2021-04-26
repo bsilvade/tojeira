@@ -2,8 +2,7 @@
 window.onload = function(){document.getElementById("entry").style.opacity = 1;}  
 
 // Refresh Page when Chinging Orientation
-window.onorientationchange = function()
-{window.location.reload();}
+window.onorientationchange = function(){window.location.reload();}
 
 // Images display [1280 - ]         
 function cursorElement(e) {
