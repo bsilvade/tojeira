@@ -2,7 +2,7 @@
 window.onload = function(){document.getElementById("entry").style.opacity = 1;}  
 
 // Refresh Page when Chinging Orientation
-window.onorientationchange = function(){window.location.reload();}
+window.onorientationchange = function(){window.location.reload();document.body.style.display = "none";}
 
 // Images display [1280 - ]         
 function cursorElement(e) {
