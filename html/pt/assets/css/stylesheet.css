@@ -192,7 +192,7 @@ transition: all 0.8s ease;}
     h2{font-size:15px;}
     h3, p{font-size:12px;}
     #topElements{top:10px}
-    #bottomElements{bottom:90px;}
+    #bottomElements{bottom:95px;}
     #topElements .language{margin-top:5px;}
     #topSignature .signature, #bottomSignature .signature{height:16px;}
     #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 45px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
@@ -214,7 +214,7 @@ transition: all 0.8s ease;}
 }
 
 @media screen and (min-width:480px) and (max-width:1024px) and (orientation : landscape){ 
-    #bottomElements{bottom:55px;}
+    #bottomElements{bottom:60px;}
     #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 55px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
     #imagesBlock{display:none;}
     #sinopsisBlock{display:none;}
