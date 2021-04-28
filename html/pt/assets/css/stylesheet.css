@@ -37,7 +37,7 @@ h3, p{font-size: 15px; line-height: 1.2;}
 a, a:hover, a:visited, a:focus{color:rgba(0,0,0,0.7); cursor:none; transition: all 0.3s ease;}
 a:hover{color:rgba(255,40,0,0.8); cursor:none;}
 
-p a{padding-bottom:2px; color:rgba(0,0,0,0.7); border-bottom:1px solid rgba(0,0,0,0.7);}
+p a{padding-bottom:1px; color:rgba(0,0,0,0.7); border-bottom:1px solid rgba(0,0,0,0.7);}
 p a:hover{color:color:rgba(0,0,0,0.4);}
 
 .language a{margin-left:6px;}
