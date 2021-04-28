@@ -169,7 +169,7 @@ transition: all 0.8s ease;}
     h3, p{font-size:12px;}
     p{line-height:1.4;}
     #topElements{top:10px;}
-    #bottomElements{bottom:185px;}
+    #bottomElements{bottom:190px;}
     #topElements .language{margin-top:5px;}
     #topSignature .signature, #bottomSignature .signature{height:18px;}
     #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 80px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
