@@ -181,7 +181,7 @@ transition: all 0.8s ease;}
     #imageFour {top:calc(60% - 105px); -ms-transform:translateY(-60%); transform:translateY(-60%); animation: imageFour 3s infinite; animation-duration:5s;}
     #imageFive {top:calc(80% - 140px); -ms-transform:translateY(-80%); transform:translateY(-80%); animation: imageFive 3s infinite; animation-duration:5s;}
     #imageSix {top:calc(100% - 174px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageSix 3s infinite; animation-duration:5s;}
-    #sinopsis{height:130px; padding:8px 15px 0 15px;}
+    #sinopsis{height:130px; padding:10px 15px 0 15px;}
     #mail h2, #location h2, #social h2{padding-top:11px;}
     #social .arrow{margin-top:6px; width:12px; height:12px;}
 }
