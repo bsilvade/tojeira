@@ -156,10 +156,9 @@ transition: all 0.8s ease;}
     #logotypeAnimationLeft .logotype, #logotypeAnimationRight .logotype{height:120px;}
     #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix {opacity:0 !important;}
     #imageOne {top:calc(0% - 0px); -ms-transform:translateY(-0%); transform:translateY(-0%); animation: imageOne 3s infinite; animation-duration:5s;}
-    #imageTwo {top:calc(33.33%% - 43px); -ms-transform:translateY(-33.33%); transform:translateY(-33.33%); animation: imageTwo 3s infinite; animation-duration:5s;}
-    #imageThree {top:calc(66.66% - 87px); -ms-transform:translateY(-66.66%); transform:translateY(-66.66%);  animation: imageThree 3s infinite; animation-duration:5s;}
-    #imageFour {top:calc(100% - 129px); -ms-transform:translateY(-100%); transform:translateY(-100%); animation: imageFour 3s infinite; animation-duration:5s;}
-    #imageFive, #imageSix {display:none;}
+    #imageTwo {top:calc(50% - 65px); -ms-transform:translateY(-50%); transform:translateY(-50%); animation: imageTwo 3s infinite; animation-duration:5s;}
+    #imageThree {top:calc(100% - 129px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageThree 3s infinite; animation-duration:5s;}
+    #imageFour, #imageFive, #imageSix {display:none;}
     #sinopsis{height:85px; padding:10px 15px 0 15px;}
     #mail h2, #location h2, #social h2{padding-top:12px;}
     #social .arrow{margin-top:6px; width:13px; height:13px;}
