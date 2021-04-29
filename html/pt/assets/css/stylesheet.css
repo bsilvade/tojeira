@@ -170,8 +170,8 @@ transition: all 0.8s ease;}
     .cursor{display:none !important;}
     a, a:hover{cursor:pointer !important;}
     h2{font-size:16px;}
-    h3, p{font-size:12px;}
-    p{line-height:1.4;}
+    h3{font-size:12px;}
+    p{font-size:18px; line-height:1.4;}
     #topElements{top:10px;}
     #bottomElements{bottom:60px;}
     #topElements .language{margin-top:5px;}
