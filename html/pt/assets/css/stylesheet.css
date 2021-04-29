@@ -92,7 +92,7 @@ p a:hover{border-bottom:1px solid rgba(255,40,0,0.8);}
 border-top:1px solid rgba(0,0,0,0.4);
 border-bottom:1px solid rgba(0,0,0,0.4);
 height:100px;
-bottom:45px; 
+bottom:0px; 
 padding:15px 15px 0 15px;
 transition: all 0.8s ease;}
 
