@@ -60,7 +60,7 @@ p a:hover{border-bottom:1px solid rgba(255,40,0,0.8);}
 #languageSwitch .language{float:right; border:1px solid rgba(0,0,0,0.4); padding:0 10px 0 10px; border-radius:10px; transition: all 0.3s ease;}
 #languageSwitch .language:hover{border:1px solid rgba(255,40,0,0.6);}
 
-#moreInfo {display:none; bottom:90px; transition: all 0.3s ease;}
+#moreInfo {display:none; position:absolute; bottom:0px; transition: all 0.3s ease;}
 #moreInfoIcon {display:block; width:16px; height:16px; opacity:0.7; transition: all 0.1s ease; transform:rotate(0deg);}
 
 
@@ -187,7 +187,7 @@ transition: all 0.8s ease;}
     #imageSix {top:calc(100% - 44px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageSix 3s infinite; animation-duration:5s;}
     #sinopsis{height:100%; top:100%; background-color:#9b8773; border:0; z-index:4;}
     #sinopsis p{padding-top:40px; line-height:1.4;}
-    #moreInfo {display:block; bottom:0px;}
+    #moreInfo {display:block;}
     #contactsBlock{background-color:#9b8773;}
     #mail, #location, #social{border-top:1px solid rgba(0,0,0,0.4);}
     #mail h2, #location h2, #social h2{padding-top:11px;}
