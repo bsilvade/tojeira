@@ -149,6 +149,7 @@ transition: all 0.8s ease;}
     a, a:hover{cursor:pointer !important;}
     h2{font-size:18px;}
     h3, p{font-size:12px;}
+    p{line-height:1.4;}
     #topSignature .signature, #bottomSignature .signature{height:18px;}
     #bottomElements{bottom:145px;}
     #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 120px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
