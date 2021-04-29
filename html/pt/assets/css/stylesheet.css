@@ -159,7 +159,7 @@ transition: all 0.8s ease;}
     #imageTwo {top:calc(50% - 65px); -ms-transform:translateY(-50%); transform:translateY(-50%); animation: imageTwo 3s infinite; animation-duration:5s;}
     #imageThree {top:calc(100% - 129px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageThree 3s infinite; animation-duration:5s;}
     #imageFour, #imageFive, #imageSix {display:none;}
-    #sinopsis{height:100px;}
+    #sinopsis{height:85px; padding:10px 15px 0 15px;}
     #mail h2, #location h2, #social h2{padding-top:12px;}
     #social .arrow{margin-top:6px; width:13px; height:13px;}
     
