@@ -25,8 +25,8 @@ function openMoreInfo(){
   	x = document.getElementById("sinopsis").style;
   	y = document.getElementById("moreInfoIcon").style;
     if(x.top == '100%' || x.top == ''){
-    	x.top = 0; y.transform = 'rotate(45deg)';     
-    } else{ x.top = '100%'; y.transform = 'rotate(0deg)';}
+    	x.top = 0; y.transform = 'rotate(45deg)'; y.width = '20px'; y.height = '20px';      
+    } else{ x.top = '100%'; y.transform = 'rotate(0deg)';  y.width = '16px'; y.height = '16px';}
     }
 
 
