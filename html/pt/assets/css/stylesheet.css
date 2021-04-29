@@ -173,18 +173,18 @@ transition: all 0.8s ease;}
     h3, p{font-size:12px;}
     p{line-height:1.4;}
     #topElements{top:10px;}
-    #bottomElements{bottom:95px;}
+    #bottomElements{bottom:60px;}
     #topElements .language{margin-top:5px;}
     #topSignature .signature, #bottomSignature .signature{height:18px;}
     #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 80px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
     #logotypeAnimationLeft .logotype, #logotypeAnimationRight .logotype{height:80px;}
     #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix {opacity:0 !important;}
     #imageOne {top:calc(0% - 0px); -ms-transform:translateY(-0%); transform:translateY(-0%); animation: imageOne 3s infinite; animation-duration:5s;}
-    #imageTwo {top:calc(20% - 35px); -ms-transform:translateY(-20%); transform:translateY(-20%); animation: imageTwo 3s infinite; animation-duration:5s;}
-    #imageThree {top:calc(40% - 70px); -ms-transform:translateY(-40%); transform:translateY(-40%); animation: imageThree 3s infinite; animation-duration:5s;}
-    #imageFour {top:calc(60% - 105px); -ms-transform:translateY(-60%); transform:translateY(-60%); animation: imageFour 3s infinite; animation-duration:5s;}
-    #imageFive {top:calc(80% - 140px); -ms-transform:translateY(-80%); transform:translateY(-80%); animation: imageFive 3s infinite; animation-duration:5s;}
-    #imageSix {top:calc(100% - 174px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageSix 3s infinite; animation-duration:5s;}
+    #imageTwo {top:calc(20% - 12px); -ms-transform:translateY(-20%); transform:translateY(-20%); animation: imageTwo 3s infinite; animation-duration:5s;}
+    #imageThree {top:calc(40% - 24px); -ms-transform:translateY(-40%); transform:translateY(-40%); animation: imageThree 3s infinite; animation-duration:5s;}
+    #imageFour {top:calc(60% - 36px); -ms-transform:translateY(-60%); transform:translateY(-60%); animation: imageFour 3s infinite; animation-duration:5s;}
+    #imageFive {top:calc(80% - 48px); -ms-transform:translateY(-80%); transform:translateY(-80%); animation: imageFive 3s infinite; animation-duration:5s;}
+    #imageSix {top:calc(100% - 59px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageSix 3s infinite; animation-duration:5s;}
     #sinopsis{height:100%; top:100%; background-color:#9b8773; border:0; z-index:4;}
     #sinopsis p{padding-top:40px; line-height:1.4;}
     #moreInfo {display:block;}
