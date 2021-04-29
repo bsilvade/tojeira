@@ -86,11 +86,13 @@ p a:hover{border-bottom:1px solid rgba(255,40,0,0.8);}
 
 /*-------- Sinopsis Block--------*/
 
-#sinopsisBlock{position:fixed; width:100%; height:100px; bottom:45px; z-index:4;}
+#sinopsisBlock{position:fixed; width:100%; bottom:45px; z-index:4;}
 
 #sinopsis{position:absolute;
 border-top:1px solid rgba(0,0,0,0.4);
 border-bottom:1px solid rgba(0,0,0,0.4);
+height:100px;
+bottom:45px; 
 padding:15px 15px 0 15px;
 transition: all 0.8s ease;}
 
