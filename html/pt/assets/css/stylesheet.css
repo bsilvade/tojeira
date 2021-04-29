@@ -214,7 +214,7 @@ transition: all 0.8s ease;}
     #imageFive {top:calc(80% - 64px); -ms-transform:translateY(-80%); transform:translateY(-80%); animation: imageFive 3s infinite; animation-duration:5s;}
     #imageSix {top:calc(100% - 79px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageSix 3s infinite; animation-duration:5s;}
     #sinopsisBlock{position:absolute; height:100%;}
-    #sinopsis{height:100%; top:100%; padding-top:40px; background-color:#9b8773; border:0; z-index:4;}
+    #sinopsis{height:100%; top:100%; padding-top:80px; background-color:#9b8773; border:0; z-index:4;}
     #sinopsis p{padding-top:40px; line-height:1.4;}
     #moreInfo {display:block;}
     #contactsBlock{height:80px; background-color:#9b8773;}
