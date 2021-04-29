@@ -227,6 +227,7 @@ transition: all 0.8s ease;}
     #bottomElements{bottom:60px;}
     #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 55px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
     #imagesBlock{display:none;}
+    #moreInfo {display:none;}
     #sinopsisBlock{display:none;}
     #contactsBlock{height:45px !important; background-color:#9b8773;}
     #mail, #location, #social{border-top:1px solid rgba(0,0,0,0.4); height:45px;}
