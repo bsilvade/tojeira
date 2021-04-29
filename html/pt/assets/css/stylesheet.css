@@ -173,7 +173,7 @@ transition: all 0.8s ease;}
     h3, p{font-size:12px;}
     p{line-height:1.4;}
     #topElements{top:10px;}
-    #bottomElements{bottom:190px;}
+    #bottomElements{bottom:95px;}
     #topElements .language{margin-top:5px;}
     #topSignature .signature, #bottomSignature .signature{height:18px;}
     #logotypeAnimationLeft, #logotypeAnimationRight{top:calc(50% - 80px); -ms-transform:translateY(-50%); transform:translateY(-50%)}
@@ -185,7 +185,9 @@ transition: all 0.8s ease;}
     #imageFour {top:calc(60% - 105px); -ms-transform:translateY(-60%); transform:translateY(-60%); animation: imageFour 3s infinite; animation-duration:5s;}
     #imageFive {top:calc(80% - 140px); -ms-transform:translateY(-80%); transform:translateY(-80%); animation: imageFive 3s infinite; animation-duration:5s;}
     #imageSix {top:calc(100% - 174px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageSix 3s infinite; animation-duration:5s;}
-    #sinopsis{height:130px; padding:10px 15px 0 15px;}
+    #sinopsis{height:100%; top:100%; background-color:#9b8773; border:0; z-index:4;}
+    #sinopsis p{padding-top:40px; line-height:1.4;}
+    #moreInfo {display:block;}
     #mail h2, #location h2, #social h2{padding-top:11px;}
     #social .arrow{margin-top:6px; width:12px; height:12px;}
 }
