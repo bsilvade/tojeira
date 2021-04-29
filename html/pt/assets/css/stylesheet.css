@@ -180,14 +180,14 @@ transition: all 0.8s ease;}
     #logotypeAnimationLeft .logotype, #logotypeAnimationRight .logotype{height:80px;}
     #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix {opacity:0 !important;}
     #imageOne {top:calc(0% - 0px); -ms-transform:translateY(-0%); transform:translateY(-0%); animation: imageOne 3s infinite; animation-duration:5s;}
-    #imageTwo {top:calc(20% - 12px); -ms-transform:translateY(-20%); transform:translateY(-20%); animation: imageTwo 3s infinite; animation-duration:5s;}
-    #imageThree {top:calc(40% - 24px); -ms-transform:translateY(-40%); transform:translateY(-40%); animation: imageThree 3s infinite; animation-duration:5s;}
-    #imageFour {top:calc(60% - 36px); -ms-transform:translateY(-60%); transform:translateY(-60%); animation: imageFour 3s infinite; animation-duration:5s;}
-    #imageFive {top:calc(80% - 48px); -ms-transform:translateY(-80%); transform:translateY(-80%); animation: imageFive 3s infinite; animation-duration:5s;}
-    #imageSix {top:calc(100% - 59px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageSix 3s infinite; animation-duration:5s;}
+    #imageTwo {top:calc(20% - 9px); -ms-transform:translateY(-20%); transform:translateY(-20%); animation: imageTwo 3s infinite; animation-duration:5s;}
+    #imageThree {top:calc(40% - 18px); -ms-transform:translateY(-40%); transform:translateY(-40%); animation: imageThree 3s infinite; animation-duration:5s;}
+    #imageFour {top:calc(60% - 27px); -ms-transform:translateY(-60%); transform:translateY(-60%); animation: imageFour 3s infinite; animation-duration:5s;}
+    #imageFive {top:calc(80% - 36px); -ms-transform:translateY(-80%); transform:translateY(-80%); animation: imageFive 3s infinite; animation-duration:5s;}
+    #imageSix {top:calc(100% - 44px); -ms-transform:translateY(-100%); transform:translateY(-100%);  animation: imageSix 3s infinite; animation-duration:5s;}
     #sinopsis{height:100%; top:100%; background-color:#9b8773; border:0; z-index:4;}
     #sinopsis p{padding-top:40px; line-height:1.4;}
-    #moreInfo {display:block; bottom:60px;}
+    #moreInfo {display:block; bottom:0px;}
     #contactsBlock{background-color:#9b8773;}
     #mail, #location, #social{border-top:1px solid rgba(0,0,0,0.4);}
     #mail h2, #location h2, #social h2{padding-top:11px;}
