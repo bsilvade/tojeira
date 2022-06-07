@@ -13,7 +13,7 @@ body{
     margin:0px;
     padding:0px;
     background-color:#9b8773;
-    cursor:none !important;
+    cursor:none;
     transition: all 1s ease;
     overflow: hidden;}
 
