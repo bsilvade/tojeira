@@ -35,8 +35,6 @@
 				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
 					<img class="" src="/images/sauna-turn-on.png" width="300px" style="cursor: pointer;"/>
 				</a>
-				<button id="turn-on-btn">Turn On</button>
-				<button id="turn-off-btn">Turn Off</button>
 				<!-- h1>Lights</h1>
 				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
 					<img class="" src="/images/sauna-turn-on.png" width="300px" /-->
@@ -47,56 +45,7 @@
     </div>
 </div>
     
-<script>
-	const deviceUrl = 'http://192.168.1.95/relay/0';
-	const redirectUrl = 'http://www.tojeira.pt/';
-
-	function turnDeviceOn() {
-	  fetch(deviceUrl, {
-		method: 'POST',
-		headers: {
-		  'Content-Type': 'application/json'
-		},
-		body: JSON.stringify({ 'turn': 'on' })
-	  })
-	  .then(response => {
-		if (response.ok) {
-		  window.location.href = redirectUrl;
-		} else {
-		  console.error('Failed to turn device on');
-		}
-	  })
-	  .catch(error => {
-		console.error(error);
-	  });
-	}
-
-	function turnDeviceOff() {
-	  fetch(deviceUrl, {
-		method: 'POST',
-		headers: {
-		  'Content-Type': 'application/json'
-		},
-		body: JSON.stringify({ 'turn': 'off' })
-	  })
-	  .then(response => {
-		if (response.ok) {
-		  window.location.href = redirectUrl;
-		} else {
-		  console.error('Failed to turn device off');
-		}
-	  })
-	  .catch(error => {
-		console.error(error);
-	  });
-	}
-
-	const turnOnButton = document.getElementById('turn-on-btn');
-	turnOnButton.addEventListener('click', turnDeviceOn);
-
-	const turnOffButton = document.getElementById('turn-off-btn');
-	turnOffButton.addEventListener('click', turnDeviceOff);
-  </script>
+    
 
 
 </body>
