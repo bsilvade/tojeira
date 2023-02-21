@@ -35,6 +35,11 @@
 				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
 					<img class="" src="/images/sauna-turn-on.png" width="300px" style="cursor: pointer;"/>
 				</a>
+				<label class="toggle">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				  </label>
+				  <p id="ison-value"></p>
 				<!-- h1>Lights</h1>
 				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
 					<img class="" src="/images/sauna-turn-on.png" width="300px" /-->
@@ -45,7 +50,49 @@
     </div>
 </div>
     
-    
+<script>
+	const toggleSwitch = document.querySelector('input[type="checkbox"]');
+	const isonValue = document.getElementById('ison-value');
+	const url = 'http://192.168.1.95/relay/0';
+
+	function updateIsonValue(ison) {
+	  isonValue.textContent = `ISON: ${ison}`;
+	}
+
+	function fetchIson() {
+	  fetch(url)
+		.then(response => response.json())
+		.then(data => {
+		  const ison = data.ison;
+		  updateIsonValue(ison);
+		  toggleSwitch.checked = ison;
+		})
+		.catch(error => {
+		  console.error(error);
+		});
+	}
+
+	toggleSwitch.addEventListener('change', function() {
+	  const ison = this.checked;
+	  fetch(url, {
+		method: 'POST',
+		headers: {
+		  'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ ison })
+	  })
+	  .then(response => response.json())
+	  .then(data => {
+		const newIson = data.ison;
+		updateIsonValue(newIson);
+	  })
+	  .catch(error => {
+		console.error(error);
+	  });
+	});
+
+	fetchIson();
+  </script>
 
 
 </body>
