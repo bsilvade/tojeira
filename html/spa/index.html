@@ -39,6 +39,8 @@
 				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
 					<img class="" src="/images/sauna-turn-on.png" width="300px" /-->
 				</a>
+				<p>Current status: <span id="statusLabel">Unknown</span></p>
+				<button id="toggleButton">Toggle</button>
 				<p>
 			</div>
 		</div>
@@ -46,7 +48,26 @@
 </div>
     
     
+<script>
+	const toggleButton = document.querySelector('#toggleButton');
+	const statusLabel = document.querySelector('#statusLabel');
 
+	fetch('http://192.168.1.95/relay/0')
+	  .then(response => response.json())
+	  .then(data => {
+		statusLabel.textContent = data.ison ? 'On' : 'Off';
+	  })
+	  .catch(error => console.error(error));
+
+	toggleButton.addEventListener('click', () => {
+	  fetch('http://192.168.1.95/relay/0?turn=toggle')
+		.then(response => response.json())
+		.then(data => {
+		  statusLabel.textContent = data.ison ? 'On' : 'Off';
+		})
+		.catch(error => console.error(error));
+	});
+  </script>
 
 </body>
 </html>
