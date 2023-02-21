@@ -35,11 +35,8 @@
 				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
 					<img class="" src="/images/sauna-turn-on.png" width="300px" style="cursor: pointer;"/>
 				</a>
-				<label class="toggle">
-					<input type="checkbox">
-					<span class="slider round"></span>
-				  </label>
-				  <p id="ison-value"></p>
+				<button id="turn-on-btn">Turn On</button>
+				<button id="turn-off-btn">Turn Off</button>
 				<!-- h1>Lights</h1>
 				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
 					<img class="" src="/images/sauna-turn-on.png" width="300px" /-->
@@ -51,47 +48,54 @@
 </div>
     
 <script>
-	const toggleSwitch = document.querySelector('input[type="checkbox"]');
-	const isonValue = document.getElementById('ison-value');
-	const url = 'http://192.168.1.95/relay/0';
+	const deviceUrl = 'http://192.168.1.95/relay/0';
+	const redirectUrl = 'http://www.tojeira.pt/';
 
-	function updateIsonValue(ison) {
-	  isonValue.textContent = `ISON: ${ison}`;
-	}
-
-	function fetchIson() {
-	  fetch(url)
-		.then(response => response.json())
-		.then(data => {
-		  const ison = data.ison;
-		  updateIsonValue(ison);
-		  toggleSwitch.checked = ison;
-		})
-		.catch(error => {
-		  console.error(error);
-		});
-	}
-
-	toggleSwitch.addEventListener('change', function() {
-	  const ison = this.checked;
-	  fetch(url, {
+	function turnDeviceOn() {
+	  fetch(deviceUrl, {
 		method: 'POST',
 		headers: {
 		  'Content-Type': 'application/json'
 		},
-		body: JSON.stringify({ ison })
+		body: JSON.stringify({ 'turn': 'on' })
 	  })
-	  .then(response => response.json())
-	  .then(data => {
-		const newIson = data.ison;
-		updateIsonValue(newIson);
+	  .then(response => {
+		if (response.ok) {
+		  window.location.href = redirectUrl;
+		} else {
+		  console.error('Failed to turn device on');
+		}
 	  })
 	  .catch(error => {
 		console.error(error);
 	  });
-	});
+	}
 
-	fetchIson();
+	function turnDeviceOff() {
+	  fetch(deviceUrl, {
+		method: 'POST',
+		headers: {
+		  'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ 'turn': 'off' })
+	  })
+	  .then(response => {
+		if (response.ok) {
+		  window.location.href = redirectUrl;
+		} else {
+		  console.error('Failed to turn device off');
+		}
+	  })
+	  .catch(error => {
+		console.error(error);
+	  });
+	}
+
+	const turnOnButton = document.getElementById('turn-on-btn');
+	turnOnButton.addEventListener('click', turnDeviceOn);
+
+	const turnOffButton = document.getElementById('turn-off-btn');
+	turnOffButton.addEventListener('click', turnDeviceOff);
   </script>
 
 
