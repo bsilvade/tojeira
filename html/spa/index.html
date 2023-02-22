@@ -1,58 +1,42 @@
 <!doctype html>
 <html class="no-js" lang="en" style="">
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOJEIRA – CULTURAL HABITAT</title>
-    <link rel="stylesheet" href="../pt/assets/css/foundation.css">
-    <link rel="stylesheet" href="../pt/assets/css/stylesheet.css">
-    <link rel="stylesheet" href="https://use.typekit.net/rrz6ojb.css">
-    <link rel="icon" type="image/svg+xml" href="../pt/assets/img/favicon.svg">
-    <link rel="alternate icon" href="../pt/assets/img/favicon.ico">
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script> 
-    <script src="../pt/assets/js/general.js"></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TOJEIRA – CULTURAL HABITAT</title>
+	<link rel="stylesheet" href="../pt/assets/css/foundation.css">
+	<link rel="stylesheet" href="../pt/assets/css/stylesheet.css">
+	<link rel="stylesheet" href="https://use.typekit.net/rrz6ojb.css">
+	<link rel="icon" type="image/svg+xml" href="../pt/assets/img/favicon.svg">
+	<link rel="alternate icon" href="../pt/assets/img/favicon.ico">
+	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<script src="../pt/assets/js/general.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHJK4WGDWG"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-	gtag('config', 'G-QHJK4WGDWG');
+		gtag('config', 'G-QHJK4WGDWG');
 	</script>
 </head>
-   
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-	function toggleDevice() {
-		var deviceId = "10521c07681f";
-		var authKey = "MTBmMmZidWlk23BFE07F7DF34199C47E3DFD847077845BB2DDA1CCF138A67AAD35B6ECBB3A7419358FA999CE5C0C";
-		var url = "https://shelly-42-eu.shelly.cloud/device/relay/control?id=" + deviceId + "&auth_key=" + authKey;
-		$.ajax({
-			url: url,
-			type: "POST",
-			data: {turn: "toggle"},
-			success: function(data) {
-				console.log("Device toggled successfully");
-			},
-			error: function(xhr, status, error) {
-				console.log("Error toggling device: " + error);
-			}
-		});
-	}
-</script>
+
 
 <body id="entry" onmousemove="cursorElement(event)" style="cursor:initial; overflow: scroll;">
- 
 
-    
-<div id="logotypeBlock">   
-	<div class="grid-container full">
-		<div class="">
+
+
+	<div id="logotypeBlock">
+		<div class="grid-container full">
+			<div class="">
 				<h1>Sauna</h1>
-				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
-					<img class="" src="/images/sauna-turn-on.png" width="300px" style="cursor: pointer;"/>
+				<a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
+					<img class="" src="/images/sauna-turn-on.png" width="300px" style="cursor: pointer;" />
 				</a>
 				<!-- h1>Lights</h1>
 				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
@@ -62,11 +46,28 @@
 
 			</div>
 		</div>
-    </div>
-</div>
-    
+	</div>
+	</div>
 
-
+	<script>
+		function toggleDevice() {
+			var deviceId = "10521c07681f";
+			var authKey = "MTBmMmZidWlk23BFE07F7DF34199C47E3DFD847077845BB2DDA1CCF138A67AAD35B6ECBB3A7419358FA999CE5C0C";
+			var url = "https://shelly-42-eu.shelly.cloud/device/relay/control?id=" + deviceId + "&auth_key=" + authKey;
+			$.ajax({
+				url: url,
+				type: "POST",
+				data: { turn: "toggle" },
+				success: function (data) {
+					console.log("Device toggled successfully");
+				},
+				error: function (xhr, status, error) {
+					console.log("Error toggling device: " + error);
+				}
+			});
+		}
+	</script>
 
 </body>
+
 </html>
