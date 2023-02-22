@@ -23,6 +23,25 @@
 	</script>
 </head>
    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	function toggleDevice() {
+		var deviceId = "10521c07681f";
+		var authKey = "MTBmMmZidWlk23BFE07F7DF34199C47E3DFD847077845BB2DDA1CCF138A67AAD35B6ECBB3A7419358FA999CE5C0C";
+		var url = "https://shelly-42-eu.shelly.cloud/device/relay/control?id=" + deviceId + "&auth_key=" + authKey;
+		$.ajax({
+			url: url,
+			type: "POST",
+			data: {turn: "toggle"},
+			success: function(data) {
+				console.log("Device toggled successfully");
+			},
+			error: function(xhr, status, error) {
+				console.log("Error toggling device: " + error);
+			}
+		});
+	}
+</script>
 
 <body id="entry" onmousemove="cursorElement(event)" style="cursor:initial; overflow: scroll;">
  
@@ -39,35 +58,15 @@
 				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
 					<img class="" src="/images/sauna-turn-on.png" width="300px" /-->
 				</a>
-				<p>Current status: <span id="statusLabel">Unknown</span></p>
-				<button id="toggleButton">Toggle</button>
-				<p>
+				<button onclick="toggleDevice()">Toggle Device</button>
+
 			</div>
 		</div>
     </div>
 </div>
     
-    
-<script>
-	const toggleButton = document.querySelector('#toggleButton');
-	const statusLabel = document.querySelector('#statusLabel');
 
-	fetch('http://192.168.1.95/relay/0')
-	  .then(response => response.json())
-	  .then(data => {
-		statusLabel.textContent = data.ison ? 'On' : 'Off';
-	  })
-	  .catch(error => console.error(error));
 
-	toggleButton.addEventListener('click', () => {
-	  fetch('http://192.168.1.95/relay/0?turn=toggle')
-		.then(response => response.json())
-		.then(data => {
-		  statusLabel.textContent = data.ison ? 'On' : 'Off';
-		})
-		.catch(error => console.error(error));
-	});
-  </script>
 
 </body>
 </html>
