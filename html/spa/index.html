@@ -53,7 +53,7 @@
 		function toggleDevice() {
 			var deviceId = "c45bbe75e1f9";
 			var authKey = "MTBmMmZidWlk23BFE07F7DF34199C47E3DFD847077845BB2DDA1CCF138A67AAD35B6ECBB3A7419358FA999CE5C0C";
-			var url = "https://shelly-42-eu.shelly.cloud/device/relay/control?id=" + deviceId + "&auth_key=" + authKey;
+			var url = "https://api.shelly.cloud/device/relay/control?id=" + deviceId + "&auth_key=" + authKey;
 			$.ajax({
 				url: url,
 				type: "POST",
