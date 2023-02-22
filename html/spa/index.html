@@ -52,30 +52,32 @@
 	<script>
 		const deviceId = "c45bbe75e1f9";
 		const authKey = "MTBmMmZidWlk23BFE07F7DF34199C47E3DFD847077845BB2DDA1CCF138A67AAD35B6ECBB3A7419358FA999CE5C0C";
-		const apiUrl = `https://api.shelly.cloud/device/relay/control?id=${deviceId}&auth_key=${authKey}&channel=0`;
+		const channel = 0; // Change this to the desired channel number
+		const apiUrl = `https://shelly-42-eu.shelly.cloud/device/relay/control?id=${deviceId}&auth_key=${authKey}&channel=${channel}`;
 
 		// function to toggle the device
 		function toggleDevice() {
-		const data = JSON.stringify({ turn: "on" });
+			const data = JSON.stringify({ turn: "toggle" });
 
-		fetch(apiUrl, {
-			method: "POST",
-			body: data,
-			headers: {
-			"Content-Type": "application/json"
-			}
-		})
-			.then(response => {
-			if (response.ok) {
-				console.log("Device toggled successfully");
-			} else {
-				console.error("Error toggling device:", response.statusText);
-			}
+			fetch(apiUrl, {
+				method: "POST",
+				body: data,
+				headers: {
+					"Content-Type": "application/json"
+				}
 			})
-			.catch(error => {
-			console.error("Error toggling device:", error);
-			});
+				.then(response => {
+					if (response.ok) {
+						console.log("Device toggled successfully");
+					} else {
+						console.error("Error toggling device:", response.statusText);
+					}
+				})
+				.catch(error => {
+					console.error("Error toggling device:", error);
+				});
 		}
+
 
 	</script>
 
