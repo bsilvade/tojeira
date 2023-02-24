@@ -56,13 +56,14 @@
 		const apiEndpoint = `https://shelly-42-eu.shelly.cloud/v1/devices/${deviceId}`;
 
 		const payload = {
-			"ison": true
+			"id": deviceId,
+			"auth_key": accessToken,
+			"ison": true,
 		};
 
 		const requestOptions = {
 			method: 'PUT',
 			headers: {
-				'Authorization': `Bearer ${accessToken}`,
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(payload)
