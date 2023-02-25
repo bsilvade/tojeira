@@ -59,13 +59,16 @@
 			"auth_key": accessToken,
 			"ison": true,
 		};
+		const formData = new URLSearchParams();
+		formData.append('turn', 'on');
 
 		const requestOptions = {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
 			},
-			body: JSON.stringify(payload)
+			//body: JSON.stringify(payload)
+			body: formData,
 		};
 
 		fetch(apiEndpoint, requestOptions)
