@@ -60,12 +60,14 @@
 			"ison": true,
 		};
 		const formData = new URLSearchParams();
-		formData.append('turn', 'on');
+		formData.append('ison', 'on');
+		formData.append('id', deviceId);
+		formData.append('auth_key', accessToken);
 
 		const requestOptions = {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded',
+				'Content-Type': 'form-data',
 			},
 			//body: JSON.stringify(payload)
 			body: formData,
