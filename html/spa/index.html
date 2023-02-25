@@ -63,8 +63,7 @@
 		const requestOptions = {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json',
-				'Authorization' : `Bearer ${accessToken}`
+				'Content-Type': 'application/x-www-form-urlencoded',
 			},
 			body: JSON.stringify(payload)
 		};
