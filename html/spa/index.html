@@ -54,8 +54,8 @@
 		const apiEndpoint = "https://shelly-42-eu.shelly.cloud/device/status";
 
 		const formData = new URLSearchParams();
-		formData.append('id', deviceId);
 		formData.append('auth_key', accessToken);
+		formData.append('id', deviceId);
 
 		const requestOptions = {
 			method: 'POST',
