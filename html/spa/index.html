@@ -42,7 +42,6 @@
 				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
 					<img class="" src="/images/sauna-turn-on.png" width="300px" /-->
 				</a>
-				<button onclick="toggleDevice()">Toggle Device</button>
 
 			</div>
 		</div>
@@ -56,6 +55,7 @@
 		const apiEndpoint = `https://shelly-42-eu.shelly.cloud/device/relay/control`;
 
 		const payload = {
+			channel: 0,
 			"id": deviceId,
 			"auth_key": accessToken,
 			"ison": true,
