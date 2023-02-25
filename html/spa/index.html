@@ -54,7 +54,7 @@
 		const apiEndpoint = "https://shelly-42-eu.shelly.cloud/device/relay/control";
 
 		const formData = new URLSearchParams();
-		formData.append('ison', "true");
+		formData.append('turn', "on");
 		formData.append('id', deviceId);
 		formData.append('auth_key', escape(accessToken));
 
