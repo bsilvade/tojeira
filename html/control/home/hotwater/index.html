@@ -64,7 +64,6 @@
 				if (response.ok) {
 					$("#label").text("Hot water is circulating. It may take a few seconds more. You can close this window.")
 					console.log(`Successfully turned on device with ID ${deviceId}`);
-					window.close();
 				} else {
 					console.error(`Failed to turn on device with ID ${deviceId}: ${response.status} ${response.statusText}`);
 				}

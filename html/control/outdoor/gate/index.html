@@ -62,9 +62,8 @@
 		fetch(apiEndpoint, requestOptions)
 			.then(response => {
 				if (response.ok) {
-					$("#label").text("Outdoor gate is turned on. You can close this window.")
+					$("#label").text("Outdoor gate is opening. You can close this window.")
 					console.log(`Successfully turned on device with ID ${deviceId}`);
-					window.close();
 				} else {
 					console.error(`Failed to turn on device with ID ${deviceId}: ${response.status} ${response.statusText}`);
 				}
