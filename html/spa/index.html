@@ -64,6 +64,7 @@
 				if (response.ok) {
 					$("#label").text(response.ok)
 					console.log(`Successfully turned on device with ID ${deviceId}`);
+					window.close();
 				} else {
 					console.error(`Failed to turn on device with ID ${deviceId}: ${response.status} ${response.statusText}`);
 				}
