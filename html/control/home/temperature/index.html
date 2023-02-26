@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="en" style="">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TOJEIRA – CULTURAL HABITAT</title>
+	<link rel="stylesheet" href="../pt/assets/css/foundation.css">
+	<link rel="stylesheet" href="../pt/assets/css/stylesheet.css">
+	<link rel="stylesheet" href="https://use.typekit.net/rrz6ojb.css">
+	<link rel="icon" type="image/svg+xml" href="../pt/assets/img/favicon.svg">
+	<link rel="alternate icon" href="../pt/assets/img/favicon.ico">
+	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<script src="../pt/assets/js/general.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHJK4WGDWG"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-QHJK4WGDWG');
+	</script>
+</head>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<body id="entry" onmousemove="cursorElement(event)" style="cursor:initial; overflow: scroll;">
+
+
+
+	<div id="logotypeBlock">
+		<div class="grid-container full">
+			<div class="">
+				<h1 id="label"></h1>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<script>
+
+		const accessToken = "MTBmMmZidWlk23BFE07F7DF34199C47E3DFD847077845BB2DDA1CCF138A67AAD35B6ECBB3A7419358FA999CE5C0C"; // Replace with your Shelly Cloud access token
+		const deviceId = "c45bbe6ad473"; // Replace with the ID of your Shelly device
+		const apiEndpoint = "https://shelly-42-eu.shelly.cloud/device/relay/control";
+
+		const formData = new URLSearchParams();
+		formData.append('channel', 0);
+		formData.append('turn', "on");
+		formData.append('id', deviceId);
+		formData.append('auth_key', escape(accessToken));
+
+		const requestOptions = {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+			},
+			body: formData,
+		};
+
+		fetch(apiEndpoint, requestOptions)
+			.then(response => {
+				if (response.ok) {
+					$("#label").text("Outdoor light is on. You can close this window.")
+					console.log(`Successfully turned on device with ID ${deviceId}`);
+					window.close();
+				} else {
+					console.error(`Failed to turn on device with ID ${deviceId}: ${response.status} ${response.statusText}`);
+				}
+			})
+			.catch(error => {
+				console.error(`Failed to turn on device with ID ${deviceId}: ${error}`);
+			});
+
+
+	</script>
+
+</body>
+
+</html>
