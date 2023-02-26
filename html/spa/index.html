@@ -33,15 +33,7 @@
 	<div id="logotypeBlock">
 		<div class="grid-container full">
 			<div class="">
-				<h1>Sauna</h1>
-				<a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
-					<img class="" src="/images/sauna-turn-on.png" width="300px" style="cursor: pointer;" />
-				</a>
-				<!-- h1>Lights</h1>
-				 <a href="http://192.168.1.95/relay/0?turn=toggle" target="_blank">
-					<img class="" src="/images/sauna-turn-on.png" width="300px" /-->
-				</a>
-
+				<h1 id="label"></h1>
 			</div>
 		</div>
 	</div>
@@ -70,6 +62,7 @@
 		fetch(apiEndpoint, requestOptions)
 			.then(response => {
 				if (response.ok) {
+					$("label").html(response)
 					console.log(`Successfully turned on device with ID ${deviceId}`);
 				} else {
 					console.error(`Failed to turn on device with ID ${deviceId}: ${response.status} ${response.statusText}`);
