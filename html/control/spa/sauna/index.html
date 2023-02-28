@@ -62,7 +62,7 @@
 		fetch(apiEndpoint, requestOptions)
 			.then(response => {
 				if (response.ok) {
-					$("#label").text("Sauna is turned on. You can close this window.")
+					$("#label").text("Sauna is turned on. You can close this window. Enjoy.")
 					console.log(`Successfully turned on device with ID ${deviceId}`);
 				} else {
 					console.error(`Failed to turn on device with ID ${deviceId}: ${response.status} ${response.statusText}`);
