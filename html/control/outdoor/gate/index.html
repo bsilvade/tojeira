@@ -59,19 +59,22 @@
 			body: formData,
 		};
 
-		fetch(apiEndpoint, requestOptions)
-			.then(response => {
-				if (response.ok) {
-					$("#label").text("Outdoor gate is opening. You can close this window.")
-					console.log(`Successfully turned on device with ID ${deviceId}`);
-				} else {
-					console.error(`Failed to turn on device with ID ${deviceId}: ${response.status} ${response.statusText}`);
-				}
-			})
-			.catch(error => {
-				console.error(`Failed to turn on device with ID ${deviceId}: ${error}`);
-			});
-
+		const response = confirm("Are you sure you want to open the gate?");
+		if(response)
+		{
+			fetch(apiEndpoint, requestOptions)
+				.then(response => {
+					if (response.ok) {
+						$("#label").text("Outdoor gate is opening. You can close this window.")
+						console.log(`Successfully turned on device with ID ${deviceId}`);
+					} else {
+						console.error(`Failed to turn on device with ID ${deviceId}: ${response.status} ${response.statusText}`);
+					}
+				})
+				.catch(error => {
+					console.error(`Failed to turn on device with ID ${deviceId}: ${error}`);
+				});
+		}
 
 	</script>
 
