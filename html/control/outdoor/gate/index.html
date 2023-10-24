@@ -67,6 +67,7 @@
 					if (response.ok) {
 						$("#label").text("Outdoor gate is opening. You can close this window.")
 						console.log(`Successfully turned on device with ID ${deviceId}`);
+						window.close() ;
 					} else {
 						console.error(`Failed to turn on device with ID ${deviceId}: ${response.status} ${response.statusText}`);
 					}
@@ -75,7 +76,10 @@
 					console.error(`Failed to turn on device with ID ${deviceId}: ${error}`);
 				});
 		}
-		window.close() ;
+		else
+		{
+			window.close() ;
+		}
 
 	</script>
 
